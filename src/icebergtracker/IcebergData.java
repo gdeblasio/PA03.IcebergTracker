@@ -2,15 +2,17 @@ package icebergtracker;
 
 import java.time.LocalDate;
 
-public class IcebergPosition {
+public class IcebergData {
     private final LocalDate date;
     private final Iceberg iceberg;
     private final String coordinates;
+    private final double volume;
 
-    public IcebergPosition(LocalDate date, Iceberg iceberg, String coordinates) {
+    public IcebergData(LocalDate date, Iceberg iceberg, String coordinates, double volume) {
         this.date = date;
         this.iceberg = iceberg;
         this.coordinates = coordinates;
+        this.volume = volume;
     }
 
     public LocalDate getDate() {
@@ -25,9 +27,14 @@ public class IcebergPosition {
         return coordinates;
     }
 
+    public double getVolume() {
+        return volume;
+    }
+    
     @Override
     public String toString() {
-        return "En: " + date + ", sus coordenadas son: " + coordinates;
+        return iceberg + ", en fecha: " + date
+                + ", volumen: " + volume + ", cooordenadas: " + coordinates;
     }
     
 }
