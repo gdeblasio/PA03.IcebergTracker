@@ -33,8 +33,9 @@ public class IcebergData {
     
     @Override
     public String toString() {
-        return iceberg + ", en fecha: " + date
-                + ", volumen: " + volume + ", cooordenadas: " + coordinates;
+        return iceberg + " El: " + date
+                + ", su volumen es: " + volume 
+                + ", y sus cooordenadas son: " + coordinates;
     }
     
 }
